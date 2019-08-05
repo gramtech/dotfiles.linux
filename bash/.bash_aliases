@@ -16,11 +16,7 @@
 #  	1.  Allow aliases to be with sudo
 #  	2.  Generic aliases
 #  	3.  Quicker navigation
-#  	4.  Jekyll
-#  	5.  Heroku's commands
-#  	6.  Ionic commands
-#  	7.  Emulate iOS using different Apple devices
-#  	8.  Git SCM Cheats
+#  	4.  Git SCM Cheats
 #  	9.  App engine commands
 #  	10. Add an "alert" alias for long running commands.
 #  	11. Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
@@ -109,62 +105,8 @@ alias so='shopt'
 alias zap='rm -i'                   # Remove file with warning
 
 
-# #  ---------------------------------------------------------------------------
-# #  	4.  Jekyll
-# #  ---------------------------------------------------------------------------
-
-# alias site-dev='JEKYLL_ENV=dev bundle exec jekyll serve --watch --trace'
-# alias site-production='JEKYLL_ENV=production bundle exec jekyll serve --watch --trace'
-
-
-# #  ---------------------------------------------------------------------------
-# #  	5.  Heroku's commands
-# #  ---------------------------------------------------------------------------
-
-# alias hcp='heroku console --remote production'
-# alias hcs='heroku console --remote staging'
-# alias hlp='heroku logs -t --remote production'
-# alias hls='heroku logs -t --remote staging'
-
-
-# #  ---------------------------------------------------------------------------
-# #  	6.  Ionic commands
-# #  ---------------------------------------------------------------------------
-
-# alias ionandroid="ionic emulate android"
-# alias ionandroidrun="ionic run android"
-# alias ionb="ionic build"
-# alias ionbandroid="ionic build android"
-# alias ionbios="ionic build ios"
-# alias iondroidreset="ionpr-android | ionpa-android | ionbandroid"
-# alias ionicons="open http://ionicons.com/"
-# alias ionios="ionic emulate ios"
-# alias ioniosrun="ionic run ios"
-# alias ionosreset="ionpr-ios | ionpa-ios | ionbios"
-# alias ionpa-android="ionic platform add android"
-# alias ionpa-ios="ionic platform add ios"
-# alias ionpr-android="ionic platform remove android"
-# alias ionpr-ios="ionic platform remove ios"
-# alias ions="ionic serve"
-# alias ionup='npm update -g cordova ionic'
-
-
-# #  ---------------------------------------------------------------------------
-# #  	7.  Emulate iOS using different Apple devices
-# #  ---------------------------------------------------------------------------
-
-# alias ione-ios-4s="ionic emulate ios --target='iPhone-4s'"
-# alias ione-ios-5="ionic emulate ios --target='iPhone-5'"
-# alias ione-ios-5s="ionic emulate ios --target='iPhone-5s'"
-# alias ione-ios-6-Plus="ionic emulate ios --target='iPhone-6-Plus'"
-# alias ione-ios-6="ionic emulate ios --target='iPhone-6'"
-# alias ione-ios-iPad-2="ionic emulate ios --target='iPad-2'"
-# alias ione-ios-iPad-Air="ionic emulate ios --target='iPad-Air'"
-# alias ione-ios-iPad-Retina="ionic emulate ios --target='iPad-Retina'"
-
-
 #  ---------------------------------------------------------------------------
-#  	8.  Git SCM Cheats
+#  	4.  Git SCM Cheats
 #  ---------------------------------------------------------------------------
 
 alias g=git
@@ -232,17 +174,8 @@ alias gta='git tag -a'
 alias gts='git tag'
 
 
-# #  ---------------------------------------------------------------------------
-# #  	9.  App engine commands
-# #  ---------------------------------------------------------------------------
-
-# alias gaeauth='appcfg.py --oauth2'
-# alias gaeup='appcfg.py --oauth2 update .'
-# alias gaeupauth='appcfg.py --oauth2 -V dev update . && appcfg.py --oauth2 update . -V'
-
-
 #  ---------------------------------------------------------------------------
-#  	10.  Add an "alert" alias for long running commands.  Use like so:
+#  	5.  Add an "alert" alias for long running commands.  Use like so:
 # sleep 10; alert
 #  ---------------------------------------------------------------------------
 
@@ -250,77 +183,14 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 
 #  ---------------------------------------------------------------------------
-#  	11.  Get OS X Software Updates, update Homebrew itself, and upgrade installed Homebrew packages
+#  	6.  Get Linux Software Updates
 #  ---------------------------------------------------------------------------
 
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew cu --all; brew doctor; brew prune; clear; mas upgrade; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
-
-#  ---------------------------------------------------------------------------
-#  	12.  Shorter commands for `Homebrew`.
-#  ---------------------------------------------------------------------------
-
-alias brewd="brew doctor"
-alias brewi="brew install"
-alias brews="brew search"
-alias brewu="brew uninstall"
-alias brewupdate='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
-
-
-# #  ---------------------------------------------------------------------------
-# #  	13.  Speed-up Terminal load time by clearing system logs
-# #  ---------------------------------------------------------------------------
-
-# alias speedup="sudo rm -rf /private/var/log/asl/*"
-
-
-# #  ---------------------------------------------------------------------------
-# #  	14.  Empty the Trash on all mounted volumes and the main HDD
-# # Also, clear Apple’s System Logs to improve shell startup speed
-# #  ---------------------------------------------------------------------------
-
-# alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; speedup"
-
-
-# #  ---------------------------------------------------------------------------
-# #  	15.  Open the device simulators
-# #  ---------------------------------------------------------------------------
-# alias iphone="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
-
-
-# #  ---------------------------------------------------------------------------
-# #  	16.  cleanupDS: Recursively delete .DS_Store files
-# #  ---------------------------------------------------------------------------
-
-# alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
-
-
-# #  ---------------------------------------------------------------------------
-# #  	17.  Hidden Files  
-# #   finderShowHidden:   Show hidden files in Finder
-# #   finderHideHidden:   Hide hidden files in Finder
-# #  ---------------------------------------------------------------------------
-
-# alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
-# alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
-
-
-# #  ---------------------------------------------------------------------------
-# #  	18.  cleanupLS:  Clean up LaunchServices to remove duplicates in the "Open With" menu
-# #  ---------------------------------------------------------------------------
-
-# alias cleanupLS="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
-
-
-# #  ---------------------------------------------------------------------------
-# #  	19.  screensaverDesktop: Run a screensaver on the Desktop
-# #  ---------------------------------------------------------------------------
-
-# alias screensaverDesktop='/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background'
+# alias update='sudo apt update && sudo apt upgrade'
 
 
 #  ---------------------------------------------------------------------------
-#  	20.  Subversion
+#  	7.  Subversion
 #  ---------------------------------------------------------------------------
 
 alias sa='svn add'
@@ -331,26 +201,8 @@ alias sr='svn rename'
 alias ss='svn status'
 
 
-# #  ---------------------------------------------------------------------------
-# #  	21.  Application launchers
-# #  ---------------------------------------------------------------------------
-
-# alias css='open -a /Applications/CSSEdit.app'
-# alias ipinfo='$HOME/Bin/gt-ipinfo.sh'
-# alias preview='open -a /Applications/Preview.app'
-# alias sql='open -a /Applications/Sequel\ Pro.app'
-# alias www='open -a /Applications/Safari.app'
-
-
-# #  ---------------------------------------------------------------------------
-# #  	22.  ttop:  Recommended 'top' invocation to minimize resources
-# #  ---------------------------------------------------------------------------
-
-# alias ttop="top -R -F -s 10 -o rsize"
-
-
 #  ---------------------------------------------------------------------------
-#  	23.  Networking
+#  	8.  Networking
 #  ---------------------------------------------------------------------------
 
 alias netCons='lsof -i'                                                                     # netCons:      Show all open TCP/IP sockets
@@ -358,44 +210,35 @@ alias op='sudo lsof -i -P'                                                      
 alias openPorts='sudo lsof -i | grep LISTEN'                                                # openPorts:    All listening connections
 
 #  ---------------------------------------------------------------------------
-#  	24.  Limit Ping to 5 ECHO_REQUEST packets
+#  	9.  Limit Ping to 5 ECHO_REQUEST packets
 #  ---------------------------------------------------------------------------
 
 alias ping='ping -c 5'
 
 #  ---------------------------------------------------------------------------
-#  	25.  wget with resume
+#  	10.  wget with resume
 #  ---------------------------------------------------------------------------
 
 alias wget='wget -c'
 
 
 #  ---------------------------------------------------------------------------
-#  	26.  Searching
+#  	11.  Searching
 #  ---------------------------------------------------------------------------
 
 alias qfind="find . -name "              # qfind:    Quickly search for file
 
 
 #  ---------------------------------------------------------------------------
-#  	27.  memHogsTop, memHogsPs:  Find memory hogs
+#  	12.  memHogsTop, memHogsPs:  Find memory hogs
 #  ---------------------------------------------------------------------------
 
 alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
 alias memHogsTop='top -l 1 -o rsize | head -20'
 
 
-# #  ---------------------------------------------------------------------------
-# #  	28.  Python Paths
-# #  ---------------------------------------------------------------------------
-
-# alias python='$(brew --prefix)/bin/python2'
-# alias python2='$(brew --prefix)/bin/python2'
-# alias python3='$(brew --prefix)/bin/python3'
-
-
 #  ---------------------------------------------------------------------------
-#  	29.  cpuHogs:  Find CPU hogs
+#  	13.  cpuHogs:  Find CPU hogs
 #  ---------------------------------------------------------------------------
 
 alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
